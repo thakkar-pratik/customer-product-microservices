@@ -1,0 +1,22 @@
+
+server:
+  port: 8083
+
+spring:
+  application:
+    name: order-service
+    
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: order_microservice_db
+      
+eureka:
+  instance:
+    prefer-ip-address: true # To register the microservice in service registry with the IP address instead of host name
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka}

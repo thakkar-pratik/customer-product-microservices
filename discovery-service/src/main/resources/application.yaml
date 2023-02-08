@@ -1,0 +1,12 @@
+
+
+
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  client: # To configure client information if the application is a client
+    register-with-eureka: false # false because this application is actually a service registry server, hence it should not get registered by itself
+    fetch-registry: false # false because this application should not try to search/fetch service registry server to register itself
